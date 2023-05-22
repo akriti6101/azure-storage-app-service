@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Register Page</title>
+<link rel="stylesheet" th:href="@{/css/style.css}" >
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+<h3>PROFILE</h3>
+   <div>
+          <img th:src="@{https://azuretable01.blob.core.windows.net/blob-container/{file}.jpg(file=${user.email})}" width="100px" height="80px">
+          <div><b>Name :</b> <p th:text="${user.name}"></p></div>
+          <div><b>Email :</b> <p  th:text="${user.email}" /></div>
+          <div><b>Gender :</b> <p th:text="${user.gender}"/></div>
+          <div><b>Contact Number :</b> <p  th:text="${user.contact}"/></div>
+          
+          <form action="/">
+             <div><button type="submit" class="fa fa-arrow-left">Home</button></div>
+          </form>
+   
+   </div>
+</body>
+</html>

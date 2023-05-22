@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Show Users</title>
+<link rel="stylesheet"  th:href="@{/css/style.css}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+<h3>Registered Users List !! </h3>
+  <table>
+  <tr>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Gender</th>
+    <th>Contact No.</th>
+  </tr>
+  <tr th:each="user: ${users}">
+    <td th:text="${user.name}" />
+    <td th:text="${user.email}" />
+    <td th:text="${user.gender}" />
+    <td th:text="${user.contact}" />
+</tr>
+
+</table>
+<form action="/">
+   <div><button type="submit" class="fa fa-arrow-left">Home</button></div>
+</form>
+</body>
+</html>
